@@ -28,12 +28,12 @@ def generate_daily_attendance_record(date) -> str:
     start_time: float = random.gauss(9.3, 0.3)
     end_time: float = random.gauss(17.7, 0.3)
 
-    start_hour = int(start_time)
-    start_minute = int(start_time % 1 * 60)
+    start_hour = str(int(start_time)).zfill(2)
+    start_minute = str(int(start_time % 1 * 12) * 5).zfill(2)
 
-    end_hour = int(end_time)
-    end_minute = int(end_time % 1 * 60)
-    return f"{date},{start_hour},{start_minute},{end_hour},{end_minute},"
+    end_hour = str(int(end_time)).zfill(2)
+    end_minute = str(int(end_time % 1 * 12) * 5).zfill(2)
+    return f"{date},{start_hour},{start_minute},{end_hour},{end_minute},something"
 
 def main() -> None:
     # Main VARs
