@@ -25,8 +25,8 @@ def create_folder_if_not_exists(folder_path: str) -> bool:
         return False
 
 def generate_daily_attendance_record(date) -> str:
-    start_time: float = random.gauss(9.3, 0.3)
-    end_time: float = random.gauss(17.7, 0.3)
+    start_time: float = random.gauss(9.25, 0.2)
+    end_time: float = random.gauss(17.8, 0.2)
 
     start_hour = str(int(start_time)).zfill(2)
     start_minute = str(int(start_time % 1 * 12) * 5).zfill(2)
